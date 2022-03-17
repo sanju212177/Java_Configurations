@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="basic" class="com.capg.email.BasicSpellChecker"> </bean>
+    <bean id="advance" class="com.capg.email.AdvanceSpellChecker"> </bean>
+    <bean id="basicspellchecker" class="com.capg.email.EmailClient">
+        <property name="spellChecker" ref="basic" />
+    </bean>
+    <bean id="advancespellchecker" class="com.capg.email.EmailClient">
+        <property name="spellChecker" ref="advance" />
+    </bean>
+
+</beans>

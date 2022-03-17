@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="doc" class="com.capg.Doctor">
+        <property name="docId" value="101" />
+        <property name="docName" value="vinay" />
+        <property name="patient" ref="patient1" />
+    </bean>
+    <bean id="patient1" class="com.capg.Patient">
+        <property name="pId" value="201" />
+        <property name="pName" value="p1" />
+    </bean>
+    <bean id="patient2" class="com.capg.Patient">
+        <property name="pId" value="202" />
+        <property name="pName" value="p2" />
+    </bean>
+</beans>

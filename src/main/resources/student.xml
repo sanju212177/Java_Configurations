@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="std" class="com.capg.Student">
+        <property name="emails">
+            <list>
+                <value>student1@email.com</value>
+                <value>student2@email.com</value>
+                <value>student3@email.com</value>
+                <value>student4@email.com</value>
+            </list>
+        </property>
+        <property name="contacts">
+            <list>
+                <value>9xxxxxxx01</value>
+                <value>9xxxxxxx02</value>
+                <value>9xxxxxxx03</value>
+                <value>9xxxxxxx04</value>
+            </list>
+        </property>
+        <property name="marks">
+            <map>
+                <entry key="student1" value="65"/>
+                <entry key="student2" value="78"/>
+                <entry key="student3" value="72"/>
+                <entry key="student4" value="85"/>
+            </map>
+        </property>
+    </bean>
+
+</beans>
